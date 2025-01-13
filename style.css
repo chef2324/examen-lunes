@@ -1,202 +1,80 @@
-
-
-body {
-    background: #f6f6f6;
-    font-family:'Times New Roman', Times, serif;
-    color: black;
-    
-}
-
-.flex-container {
-    max-width: 1040px;
-    margin: 0 auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:overpass;
     display: flex;
-   
-}
-
-nav, header, footer {
-    grid-column: span 2;
-    grid-row: span 1;
-    border-bottom: 1px solid #ccc;
-}
-   
-
-h1 {
-    font-size: 25px;
-    padding: 10px;
-    text-align: center;
-}
-
-nav {
-    background-color: green;
-    border-radius: 0.3em;
-
-}
-.button {
-    background-color: rgb(47, 141, 47);
-    color: white;
-    border-radius: 3px;
-    font-size: 14px;
-    
-}
-
-.main-nav {
-    display: flex;
-    margin-left: 0.5em;
-    list-style-type: none;
-}
-
-.main-nav {
-    padding-top: 1em;
-}
-
-.main-nav > li > a {
-    text-decoration: none;
-    color: white;
-    padding: 0.5em 1em;
-    
-}
-
-.main-nav > .right-nav {
-    margin-left: auto;
-}
-
-label {
-  font-size: 18px;
-
-}
-
-span {
-    font-size: 18px;
-}
-
-main {
-    grid-column: span 1;
-}
-
-#clearfilters {
-    background-color: rgb(179, 170, 170);
-    margin: 30px;
-    
-    border-radius: 4px;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    row-gap: 3em;
-    column-gap: 3em;
-    padding-top: 2em;
-}
-
-.product-card {
-    height: 440px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  h1 {
+    color: hsl(0, 0%, 100%);
+  }
+  p{
+    color:hsl(217, 12%, 63%) ;
+  }
+  
+  .card {
+    background-color:hsl(217, 12%, 63%);
     width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 2em 2em 2em;
-    box-shadow: 0 4px 12px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px ;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: hsl(216, 12%, 8%) ;
+  }
+  
+  .button-container {
     display: flex;
     flex-direction: column;
-}
-
-.product-card:hover {
-    background-color: rgba(224, 218, 218, 0.612);
-}
-
-.product-card-title {
-    text-align: center;
- 
-}
-
-.product-card-footer {
-    text-align: right;
-    flex-basis: 10%;
-}
-
-
-.price {
-    color: rgba(213, 14, 14, 0.871);
-    font-size: 18px;
-    font-weight: bold;
-    font-style: italic;
-    text-decoration: underline;
-    
-}
-
-.product-card-footer > button {
-    padding: 0.5em 0.5em;
-    background-color: blue;
-    border: none;
-    border-radius: 3px;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 14px;
     color: white;
-}
-
-.product-card-footer > button:hover {
-    background-color: rgb(112, 112, 209);
-    cursor: pointer; 
-}
-
-footer {
-    padding: 1em;
-}
-
-footer > ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    column-gap: 1em;
-    column-gap: 1em;
-    row-gap: 1em; 
-}
-
-footer > ul > li > a {
-    color: rgb(81, 78, 78);
-    padding: 0.5em 0.1em;
-    text-decoration: none;
-}
-
-footer > ul > li > a:hover {
-    color: green
-    
-}
-
-footer > ul > li > a:active {
-    color: rgb(113, 180, 117);
-}
-
-footer > p {
-    text-align: center;
-    color: rgb(81, 78, 78);;
-    font-weight: bold;
-    padding-top: 3em;
-}
-
-
-
-
-@media screen and (max-width: 480px) {
-    body {
-        background-color: rgb(235, 235, 235);
-        flex-direction: column;
-        
-    }
-}
-@media screen and (max-width: 800px) {
-    body {
-        background-color: rgb(243, 241, 239);
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    body {
-        flex-direction: row;
-        
-    }
-    
-}
+    background-color:darkblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: grey;
+    transform: scale(1.05);
+  }
+  
+  .send-btn {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color:hsl(25, 97%, 53%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .send-btn:hover {
+    background-color:orange;
+    transform: scale(1.05);
+  }
+  
