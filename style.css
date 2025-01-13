@@ -1,80 +1,105 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family:overpass;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-  }
-  h1 {
-    color: hsl(0, 0%, 100%);
-  }
-  p{
-    color:hsl(217, 12%, 63%) ;
-  }
-  
-  .card {
-    background-color:hsl(217, 12%, 63%);
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px ;
+    min-height: 100vh;
+}
+main {
+    width: 100%;
+    max-width: 375px;
+    padding: 16px;
+}
+
+.feedbackCard,
+.thankyouCard {
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 16px;
+    padding: 24px;
     text-align: center;
-  }
-  
-  .card-title {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  
-  .card-description {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: hsl(216, 12%, 8%) ;
-  }
-  
-  .button-container {
+    width: 100%;
+    max-width: 375px;
+}
+
+.feedbackCard h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.feedbackCard p {
+    color: hsl(217, 12%, 63%);
+    margin-bottom: 16px;
+}
+
+.rating {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .btn {
-    padding: 10px;
-    font-size: 14px;
-    color: white;
-    background-color:darkblue;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.rating button {
+    width: 48px;
+    height: 48px;
+    background-color: hsl(216, 12%, 8%);
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: grey;
-    transform: scale(1.05);
-  }
-  
-  .send-btn {
-    margin-top: 20px;
-    padding: 12px;
+    border-radius: 50%;
+    color: hsl(217, 12%, 63%);
     font-size: 16px;
-    color: white;
-    background-color:hsl(25, 97%, 53%);
-    border: none;
-    border-radius: 5px;
+    font-weight: 700;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .send-btn:hover {
-    background-color:orange;
-    transform: scale(1.05);
-  }
-  
+}
+
+.rating button:hover,
+.rating button.active {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+.submit-button {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: hsl(25, 97%, 63%);
+}
+
+.thankyouCard h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.thankyouCard p {
+    color: hsl(217, 12%, 63%);
+    margin-bottom: 16px;
+}
+
+.selectedRating {
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(25, 97%, 53%);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 0 auto 24px;
+    display: inline-block;
+}
